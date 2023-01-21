@@ -1,0 +1,138 @@
+@import 'variables';
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img[src$='music.svg'] {
+  width: 50px;
+  height: 50px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: $ff;
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh;
+  background-color: $pale-blue;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: auto;
+}
+
+.clr-dark {
+  color: $dark-blue;
+  font-weight: 700;
+}
+
+.mg-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.card {
+  text-align: center;
+  background-color: #fff;
+  font-size: 16px;
+  width: 20rem;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+
+    h1 + p {
+      color: $desaturated-blue;
+      line-height: 1.5;
+      opacity: 0.8;
+      font-weight: 100;
+    }
+
+    .plan {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $very-pale-blue;
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 0.9rem;
+
+      img + p {
+        line-height: 1.4;
+        color: $desaturated-blue;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+
+      a {
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #ada2ff;
+      }
+    }
+
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      button,
+      button + p {
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:first-child {
+        background-color: $bright-blue;
+        font-weight: 600;
+      }
+
+      button:first-child:hover {
+        background-color: #ada2ff;
+      }
+
+      button + p {
+        background-color: #fff;
+        color: $desaturated-blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 31.25em) {
+  body {
+    background-image: url('/images/pattern-background-desktop.svg');
+  }
+}

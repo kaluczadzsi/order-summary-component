@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img[src$="music.svg"] {
+  width: 50px;
+  height: 50px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh;
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: auto;
+}
+
+.clr-dark {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 700;
+}
+
+.mg-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.card {
+  text-align: center;
+  background-color: #fff;
+  font-size: 16px;
+  width: 20rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.card-content h1 + p {
+  color: hsl(224deg, 23%, 55%);
+  line-height: 1.5;
+  opacity: 0.8;
+  font-weight: 100;
+}
+.card-content .plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.card-content .plan img + p {
+  line-height: 1.4;
+  color: hsl(224deg, 23%, 55%);
+}
+.card-content .plan span {
+  font-size: 1rem;
+}
+.card-content .plan a {
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.card-content .plan a:hover {
+  color: #ada2ff;
+}
+.card-content div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.card-content div:last-child button,
+.card-content div:last-child button + p {
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card-content div:last-child button:first-child {
+  background-color: hsl(245deg, 75%, 52%);
+  font-weight: 600;
+}
+.card-content div:last-child button:first-child:hover {
+  background-color: #ada2ff;
+}
+.card-content div:last-child button + p {
+  background-color: #fff;
+  color: hsl(224deg, 23%, 55%);
+}
+
+@media (min-width: 31.25em) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+  }
+}/*# sourceMappingURL=style.css.map */
