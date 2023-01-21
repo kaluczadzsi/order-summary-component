@@ -30,13 +30,10 @@ body {
   background-repeat: no-repeat;
   background-size: 100vw 50vh;
   background-color: hsl(225deg, 100%, 94%);
-}
-
-.container {
-  height: 100vh;
   display: grid;
   place-content: center;
   margin: auto;
+  height: 100vh;
 }
 
 .clr-dark {
@@ -121,5 +118,10 @@ body {
 @media (min-width: 31.25em) {
   body {
     background-image: url("/images/pattern-background-desktop.svg");
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    height: 600px;
   }
 }/*# sourceMappingURL=style.css.map */
